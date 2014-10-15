@@ -11,13 +11,34 @@
 @interface ViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate>
 {
     IBOutlet UILabel *label1;
+    IBOutlet UISwitch *leftSwitch;
+    IBOutlet UISwitch *rightSwitch;
+    IBOutlet UISlider *slider;
+
 }
 
 @property (weak,nonatomic) UILabel *label1;
+@property (weak,nonatomic) UISwitch *leftSwitch;
+@property (weak,nonatomic) UISwitch *rightSwitch;
+@property (weak,nonatomic) UISlider *slider;
+
 -(IBAction)onClick:(id)sender;
+-(IBAction)valueChange:(id)sender;
+
+//键盘
 -(void)keyboardShow :(NSNotification*) noti;
 -(void)keyboardHide :(NSNotification*) noti;
 
+//slider
+-(void) setValue:(float)value animated:(BOOL) animated;
+-(IBAction)sliderValueChange:(id)sender;
+
+
+//seg
+-(IBAction)touchDown:(id)sender;
+
+
 
 @end
+
 

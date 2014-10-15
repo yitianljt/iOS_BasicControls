@@ -63,5 +63,42 @@
 
 }
 
+-(IBAction)valueChange:(id)sender{
+    UISwitch *s = (UISwitch *)sender;
+    BOOL setting = s.isOn;
+    NSLog(@"%d",s.isOn);
+    [self.leftSwitch setOn:setting animated:YES];
+    [self.rightSwitch setOn:setting animated:YES];
+    
+}
+
+-(void) setValue:(float)value animated:(BOOL) animated{
+
+}
+
+-(IBAction)sliderValueChange:(id)sender{
+    UISlider *sld = (UISlider *)sender;
+    NSLog(@"slider=%f",[sld value]);
+}
+
+-(IBAction)touchDown:(id)sender
+{
+    UISegmentedControl * seg = (UISegmentedControl*)sender;
+    //[seg _selectedSegment];
+    NSLog(@"seg=%ld",[seg selectedSegmentIndex]);
+    
+    if ([seg selectedSegmentIndex] ==1) {
+        self.leftSwitch.hidden = NO;
+        self.rightSwitch.hidden = NO;
+    }
+    else
+    {
+        self.leftSwitch.hidden = YES;
+        self.rightSwitch.hidden = YES;
+    }
+    
+}
+
+
 
 @end
