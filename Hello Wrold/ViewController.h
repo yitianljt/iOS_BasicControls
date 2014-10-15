@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate>
 {
     IBOutlet UILabel *label1;
 }
+
 @property (weak,nonatomic) UILabel *label1;
 -(IBAction)onClick:(id)sender;
+-(void)keyboardShow :(NSNotification*) noti;
+-(void)keyboardHide :(NSNotification*) noti;
+
 
 @end
 
