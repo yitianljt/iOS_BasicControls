@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate>
+@interface ViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate,UIWebViewDelegate>
 {
     IBOutlet UILabel *label1;
     IBOutlet UISwitch *leftSwitch;
     IBOutlet UISwitch *rightSwitch;
     IBOutlet UISlider *slider;
+    IBOutlet UIWebView* webView;
 
 }
 
@@ -21,9 +22,12 @@
 @property (weak,nonatomic) UISwitch *leftSwitch;
 @property (weak,nonatomic) UISwitch *rightSwitch;
 @property (weak,nonatomic) UISlider *slider;
+@property (weak,nonatomic) UIWebView* webView;
 
 -(IBAction)onClick:(id)sender;
+-(IBAction)onWebViewTest:(id)sender;
 -(IBAction)valueChange:(id)sender;
+
 
 //键盘
 -(void)keyboardShow :(NSNotification*) noti;

@@ -99,6 +99,21 @@
     
 }
 
+-(IBAction)onWebViewTest:(id)sender
+{
+    NSURL * url = [NSURL URLWithString:@"http://www.baidu.com"];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+    self.webView.delegate = self;
+    
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSLog(@"webViewDidFinishLoad");
+}
+
+
+
 
 
 @end
