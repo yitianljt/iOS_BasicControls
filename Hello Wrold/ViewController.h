@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+    IBOutlet UILabel *label1;
+}
+@property (weak,nonatomic) UILabel *label1;
+-(IBAction)onClick:(id)sender;
 
 @end
 
