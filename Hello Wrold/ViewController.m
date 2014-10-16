@@ -157,5 +157,46 @@
     }
 }
 
+-(IBAction) onTestAlertView:(id)sender
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Test警告框"
+                                                    message:@"This is an Alert!"
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"确定", nil];
+    [alert show];
+}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"index =%d",buttonIndex);
+}
+
+-(void) onTestActionSheet:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"ActionSheet"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"取消"
+                                               destructiveButtonTitle:@"第一个"
+                                                    otherButtonTitles:@"第二个",@"第三个", nil];
+    
+    actionSheet.actionSheetStyle = UIBarStyleBlackOpaque;//UIActionSheetStyleAutomatic;
+    [actionSheet showInView:self.view];
+
+}
+
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"index =%d",buttonIndex);
+}
+
+
+-(IBAction)save:(id)sender
+{
+    self.label2.text = @"Save";
+}
+
+-(IBAction)open:(id)sender
+{
+    self.label2.text = @"Open";
+}
 
 @end

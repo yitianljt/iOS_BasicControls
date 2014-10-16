@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate,UIWebViewDelegate>
+@interface ViewController : UIViewController<UITextViewDelegate,
+                                            UITextFieldDelegate,
+                                            UIWebViewDelegate,
+                                            UIAlertViewDelegate,
+                                            UIActionSheetDelegate>
 {
     IBOutlet UILabel *label1;
     IBOutlet UISwitch *leftSwitch;
@@ -18,6 +22,10 @@
     IBOutlet UIScrollView *scrollView;
     IBOutlet UITextField *textField;
     NSTimer *myTimer;
+    IBOutlet UIButton *testAlertView;
+    IBOutlet UIButton *testActionSheet;
+    IBOutlet UILabel *label2;
+    
 }
 
 @property (weak,nonatomic) UILabel *label1;
@@ -29,6 +37,8 @@
 @property (weak,nonatomic) UITextField *textField;
 @property (weak,nonatomic) IBOutlet UIActivityIndicatorView *myActivityIndicatorView;
 @property (weak,nonatomic) IBOutlet UIProgressView *myProgressView;
+@property (weak,nonatomic) UILabel *label2;
+
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onWebViewTest:(id)sender;
@@ -36,6 +46,11 @@
 -(IBAction)onUpload:(id)sender;
 -(IBAction)onDownProgress:(id)sender;
 -(void)download:(id)sender;
+-(IBAction) onTestAlertView:(id)sender;
+-(IBAction) onTestActionSheet:(id)sender;
+-(IBAction)save:(id)sender;
+-(IBAction)open:(id)sender;
+
 
 //键盘
 -(void)keyboardShow :(NSNotification*) noti;
