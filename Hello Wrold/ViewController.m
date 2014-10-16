@@ -126,7 +126,36 @@
 }
 
 
+-(IBAction)onUpload:(id)sender
+{
+    if ([self.myActivityIndicatorView isAnimating]) {
+        [self.myActivityIndicatorView stopAnimating];
+    }
+    else
+    {
+        [self.myActivityIndicatorView startAnimating];
+    }
+}
 
+-(IBAction)onDownProgress:(id)sender
+{
+    myTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                               target:self
+                                             selector:@selector(download:)
+                                             userInfo:nil
+                                              repeats:YES];
+    self.myProgressView.progress =0.0;
+}
+
+-(void)download:(id)sender
+{
+    self.myProgressView.progress = self.myProgressView.progress+0.1;
+    if (self.myProgressView.progress == 1.0) {
+        [myTimer invalidate];
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"DownLoad Com" message:@"" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
 
 
 @end

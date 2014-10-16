@@ -17,6 +17,7 @@
     IBOutlet UIWebView* webView;
     IBOutlet UIScrollView *scrollView;
     IBOutlet UITextField *textField;
+    NSTimer *myTimer;
 }
 
 @property (weak,nonatomic) UILabel *label1;
@@ -26,11 +27,15 @@
 @property (weak,nonatomic) UIWebView* webView;
 @property (weak,nonatomic) UIScrollView *scrollView;
 @property (weak,nonatomic) UITextField *textField;
+@property (weak,nonatomic) IBOutlet UIActivityIndicatorView *myActivityIndicatorView;
+@property (weak,nonatomic) IBOutlet UIProgressView *myProgressView;
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onWebViewTest:(id)sender;
 -(IBAction)valueChange:(id)sender;
-
+-(IBAction)onUpload:(id)sender;
+-(IBAction)onDownProgress:(id)sender;
+-(void)download:(id)sender;
 
 //键盘
 -(void)keyboardShow :(NSNotification*) noti;
