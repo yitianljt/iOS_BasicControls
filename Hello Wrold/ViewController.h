@@ -38,6 +38,8 @@
 @property (weak,nonatomic) IBOutlet UIActivityIndicatorView *myActivityIndicatorView;
 @property (weak,nonatomic) IBOutlet UIProgressView *myProgressView;
 @property (weak,nonatomic) UILabel *label2;
+@property (weak,nonatomic) IBOutlet UILabel *labelDate;
+@property (weak,nonatomic) IBOutlet UIDatePicker *datePicker;
 
 
 -(IBAction)onClick:(id)sender;
@@ -50,6 +52,7 @@
 -(IBAction) onTestActionSheet:(id)sender;
 -(IBAction)save:(id)sender;
 -(IBAction)open:(id)sender;
+-(IBAction)onClickDate:(id)sender;
 
 
 //键盘
@@ -59,7 +62,6 @@
 //slider
 -(void) setValue:(float)value animated:(BOOL) animated;
 -(IBAction)sliderValueChange:(id)sender;
-
 
 //seg
 -(IBAction)touchDown:(id)sender;

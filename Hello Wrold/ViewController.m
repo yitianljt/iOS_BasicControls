@@ -199,4 +199,14 @@
     self.label2.text = @"Open";
 }
 
+-(IBAction)onClickDate:(id)sender
+{
+    NSDate *theDate = self.datePicker.date;
+    NSLog(@"the date picked is %@",[theDate descriptionWithLocale:[NSLocale currentLocale]]);
+    
+    
+    
+}
+
+
 @end
