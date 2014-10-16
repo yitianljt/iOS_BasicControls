@@ -15,6 +15,7 @@
     IBOutlet UISwitch *rightSwitch;
     IBOutlet UISlider *slider;
     IBOutlet UIWebView* webView;
+    IBOutlet UIScrollView *scrollView;
 
 }
 
@@ -23,6 +24,7 @@
 @property (weak,nonatomic) UISwitch *rightSwitch;
 @property (weak,nonatomic) UISlider *slider;
 @property (weak,nonatomic) UIWebView* webView;
+@property (weak,nonatomic) UIScrollView *scrollView;
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onWebViewTest:(id)sender;

@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.scrollView.contentSize = CGSizeMake(320, 600);
 }
 
 
@@ -60,7 +61,6 @@
 
 -(void)keyboardHide :(NSNotification*) noti{
     NSLog(@"Hide keyboard");
-
 }
 
 -(IBAction)valueChange:(id)sender{
@@ -85,7 +85,7 @@
 {
     UISegmentedControl * seg = (UISegmentedControl*)sender;
     //[seg _selectedSegment];
-    NSLog(@"seg=%ld",[seg selectedSegmentIndex]);
+    NSLog(@"seg=%ld",(long)[seg selectedSegmentIndex]);
     
     if ([seg selectedSegmentIndex] ==1) {
         self.leftSwitch.hidden = NO;
