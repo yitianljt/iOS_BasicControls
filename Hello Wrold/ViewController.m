@@ -18,12 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.scrollView.contentSize = CGSizeMake(320, 600);
+    self.textField.delegate = self;
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be recreasted.
 }
 
 //Button
@@ -57,6 +58,18 @@
 
 -(void)keyboardShow :(NSNotification*) noti{
     NSLog(@"show keyboard");
+    NSDictionary* info = [noti userInfo];
+    NSValue* aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+    CGSize keyboardSize = [aValue CGRectValue].size;
+    
+    CGRect viewFrame = self.scrollView.frame;
+    viewFrame.size.height -=(keyboardSize.height);
+    self.scrollView.frame = viewFrame;
+    
+    CGRect textFieldRect = [self.textField frame];
+    [self.scrollView scrollRectToVisible:textFieldRect animated:YES];
+    
+    
 }
 
 -(void)keyboardHide :(NSNotification*) noti{

@@ -16,7 +16,7 @@
     IBOutlet UISlider *slider;
     IBOutlet UIWebView* webView;
     IBOutlet UIScrollView *scrollView;
-
+    IBOutlet UITextField *textField;
 }
 
 @property (weak,nonatomic) UILabel *label1;
@@ -25,6 +25,7 @@
 @property (weak,nonatomic) UISlider *slider;
 @property (weak,nonatomic) UIWebView* webView;
 @property (weak,nonatomic) UIScrollView *scrollView;
+@property (weak,nonatomic) UITextField *textField;
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onWebViewTest:(id)sender;

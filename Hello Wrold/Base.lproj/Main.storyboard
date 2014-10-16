@@ -32,12 +32,18 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S7A-tI-H4N">
-                                        <rect key="frame" x="144" y="324" width="58" height="30"/>
+                                        <rect key="frame" x="140" y="110" width="58" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button3">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="CaI-B5-Tuh">
+                                        <rect key="frame" x="133" y="404" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -46,6 +52,7 @@
                     <navigationItem key="navigationItem" id="dmM-BE-kr8"/>
                     <connections>
                         <outlet property="scrollView" destination="yMh-m6-ukd" id="RmD-xJ-y8k"/>
+                        <outlet property="textField" destination="CaI-B5-Tuh" id="jYO-A1-fg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
